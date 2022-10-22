@@ -1,0 +1,118 @@
+/* To remove the extra padding in the input:color field */
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #251B37;
+
+}
+
+/* ======================================================
+    The header to select wchich color you wanna generate
+========================================================= */
+header.container {
+    margin: 1rem ;
+    padding: .5rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.color-input,
+.mode-list,
+.btn-get-sheme {
+    color: white;
+    background-color: inherit;
+    border-color: #EDEDED;
+    height: 35px;
+}
+
+.color-input {
+    border: 3px solid #EDEDED;
+    margin: 0;
+    padding: 0;
+    width: 55px;
+}
+
+.mode-list {
+    padding: 5px;
+    width: 270px;
+    background-color: inherit;
+    border-color: #EAEAEA;
+    border-radius: 5px;
+    font-size: .84rem;
+}
+
+.mode-list option {
+    background-color: #251B37;
+}
+
+.btn-get-sheme {
+    width: 120px;
+    border: none;
+    background-color: #3C4048;
+    border-radius: 5px;
+    font-size: .85rem;
+    transition: all .5s;
+}
+
+.btn-get-sheme:hover {
+    background: orange;
+    color: whitesmoke;
+    font-size: .86rem;
+    cursor: pointer;
+}
+
+
+
+/* ===================================
+    The Results gonna renderd from JS
+================================ ===== */
+
+.results {
+    display: flex;
+}
+
+.output-color {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    
+    cursor: pointer;
+}
+
+.output-hex {
+    align-self: flex-end;
+    margin-bottom: -31px;
+    color: #EAEAEA;
+    font-size: .9rem;
+
+    cursor: pointer;
+}
+
+
+/* ==============================
+    Alert hex code when copyied
+================================= */
+.hex-alert {
+    text-align: center;
+    color: white;
+    background-color: gray;
+    margin-top: 0;
+    padding: .5rem;
+    border-radius: 4px;
+    animation: hex-alert 2s;
+}
+
+@keyframes hex-alert {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
