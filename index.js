@@ -48,6 +48,7 @@ function render(colors) {
 
 // Show an alert when the text copyied
 function renderAlert(hexMessage, hexValue) {
+    document.body.style.background = hexValue;
     // Check if the alert already display if so delete => create next one
     const divEl = document.querySelector('.hex-alert');
     if(divEl) {

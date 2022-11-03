@@ -8,11 +8,20 @@ input[type="color"]::-webkit-color-swatch-wrapper {
     box-sizing: border-box;
 }
 html, body {
-    margin: 0;
+    max-width: 600px;
+    margin: 0 auto;
     padding: 0;
     font-family: 'Roboto Mono', monospace;
-    background-color: #251B37;
+    /* background-color: #251B37; */
+}
 
+/* 
+    The reason why I set the background here, seperate than the html 
+    because, I want to each time I pick a color, the background change to it 
+    but unfortunately html was prevent me on this 
+*/
+body {
+    background-color: #251B37;
 }
 
 /* ======================================================
